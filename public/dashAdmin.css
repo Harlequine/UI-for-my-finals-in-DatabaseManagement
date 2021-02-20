@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: 'trebuchet ms', "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+}
+
+.container-top{
+
+    background-color: beige;
+    overflow: hidden;
+    margin-bottom: 50px;
+    
+}
+
+.bottom{
+    width: 100%;
+    position: absolute;
+    
+}
+
+.btn{
+    width: 20%;
+    border: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    float: center;
+}
+
+.btn:hover {   
+    background-color: rgb(122, 122, 122); 
+}  

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Log-In</title>
+        <link rel="stylesheet" href="/try.css">
+
+    </head>
+    <body>
+        <section class="container">
+            <center><h1>LOG-IN</h1> </center>
+            <form action="/loginUser/userProfile" method="post" id="forms">
+    
+                <label> <center></center>Username: </center</label>   
+                    <input type="text" placeholder="Enter Username" name="username" required>  <br>
+                    <label>Password:   </label>   
+                    <input type="password" placeholder="Enter Password" name="password" id="myInput" required>  
+                    <input type="checkbox" onclick="myFunction()">Show Password
+                    <center> <input class="btn" type="submit" value="submit"> <br>
+                    
+               {{#if message}}
+               <div class="alert alert-warning" role="alert">{{message}}</div>
+               {{/if}}
+
+                <div class= "login">
+                    <a href="/admin">Log-In as Administrator</a> <br>
+                    <a href="/register">Register for New User</a>
+                </center>
+                </div>
+            </form>
+        </section>
+        <script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </body>
+</html>

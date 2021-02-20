@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/dash.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+    <body>
+
+    <div class = "container-top">
+       <a> DBMS Landing</a>
+            {{#if username}}
+            <a class="right">
+                 Welcome {{username}}
+        </a>
+            {{/if}}
+    </div>
+    
+<section class = "container-mid">
+<a class="header">
+<center><b>USER PROFILE</b>
+</a>
+
+
+<a class = "contents">
+    <br>
+{{#if result}}
+<br>First Name: <b><span>{{result}}</span></b>
+
+{{/if}}
+{{#if result2}}
+<br>Last Name: <b><span>{{result2}}</span></b>
+{{/if}}
+{{#if result3}}
+<br>Email: <b><span>{{result3}}</span></b>
+{{/if}}
+
+<br>
+<br>
+
+<form action="/loginUser/" method="post">
+<input class="btn" type="submit" value="logout"></form>
+
+</center>
+</a>
+</section>
+
+
+</body>
+
+
+    <!-- user profile
+firstname
+lastname
+username
+logout -->
+
+</html>

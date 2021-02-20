@@ -1,0 +1,53 @@
+*{
+    font-family: 'trebuchet ms', "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: beige;
+    text-align: center;
+}
+h1{
+    margin-top: 0;
+    font-size: 150%;
+}
+.container{
+    display: inline-block;
+    margin-top: 10%;
+        margin-left: 20%;
+        margin-right: 20%;
+    padding: 50px;
+    margin-top: 10%;
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: rgb(216, 241, 241);
+    
+}
+
+#forms{
+    line-height: 2.5;
+}
+
+.btn{
+    width: 50%;
+    border: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.btn:hover {   
+    background-color: rgb(122, 122, 122); 
+}  
+
+.login{
+    color: #333;
+}
+.error {
+    background: orangered;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+  }
