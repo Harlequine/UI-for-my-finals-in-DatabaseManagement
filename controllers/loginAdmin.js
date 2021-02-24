@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 
+
 function getConnection(){
     return mysql.createConnection({
         host: process.env.DATABASE_HOST,
@@ -15,13 +16,14 @@ exports.admin = (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
 
-    connection.query("SELECT * FROM admin WHERE username = ? AND password = ?",[username,password], (err, results,fields) => {
+    connection.query("SELECT * FROM `admin` WHERE username = ? AND password = ?",[username,password], (err, results,fields) => {
         if(results.length > 0) {
-            console.log("welcome admin");
+        console.log("welcome admin");
+           connection.query("SELECT * FROM `users`",(err,users,fields) => {
             connection.query("SELECT * FROM log", (err, results,fields) => {
-                res.render('landingpageAdmin',{results});
+                res.render('landingpageAdmin',{results,users});
             })
-            
+           })
         }
         else{
             const msg = "Incorrect Username or Password";
@@ -29,3 +31,4 @@ exports.admin = (req, res) => {
         }
     })
 }
+

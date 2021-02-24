@@ -15,8 +15,9 @@
                 <label> <center></center>Username: </center</label>   
                     <input type="text" placeholder="Enter Username" name="username" required>  <br>
                     <label>Password:   </label>   
-                    <input type="password" placeholder="Enter Password" name="password" id="myInput" required>  
-                    <input type="checkbox" onclick="myFunction()">Show Password
+                    <input type="password" placeholder="Enter Password" name="password" id="reveal" required>  
+                    <br>
+                    <input type="checkbox" onclick="myFunction()"> Show Password
                     <center> <input class="btn" type="submit" value="submit"> <br>
                     
                {{#if message}}
@@ -24,20 +25,21 @@
                {{/if}}
 
                 <div class= "login">
-                    <a href="/admin">Log-In as Administrator</a> <br>
+                    <a href="/loginAdmin">Log-In as Administrator</a> <br>
                     <a href="/register">Register for New User</a>
                 </center>
                 </div>
             </form>
         </section>
         <script>
-function myFunction() {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
+            function myFunction() {
+                var x = document.getElementById("reveal");
+                if (x.type === "password") {
+                    x.type = "text";
+                }else{
+                    x.type = "password";
+                }
+            }
+        </script>
     </body>
 </html>

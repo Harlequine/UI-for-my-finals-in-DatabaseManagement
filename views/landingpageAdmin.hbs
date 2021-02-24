@@ -15,16 +15,57 @@
 
 <div class = "container-top">
     <h1>Welcome Admin</h1>
+    <div class="bottom">
+    <form action="/loginAdmin/" method="post">
+    <input class="btn" type="submit" value="logout"></form>
+</div>
 </div>
 
-
 <div class="row">
+     <div class="col-sm-12">
+        <div class="card adminLog">
+            <h5 class="card-header text-center">USERS</h5>
+            <div class="card-body">
+                        {{!-- <h5 class="card-title">Logs</h5> --}}
+                    <table class="table table-striped">
+
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">USERNAME</th>
+                                <th scope="col">FIRSTNAME</th>
+                                <th scope="col">LASTNAME</th>
+                                <th scope="col">EMAIL</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each users}}
+                            <tr>
+                                <td>{{id}}</td>{{! for each loop --}}
+                                <td>{{username}}</td>
+                                <td>{{firstName}}</td>
+                                <td>{{lastName}}</td>{{! for each loop --}}
+                                <td>{{email}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        
+                    </table>
+                </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row-2">
      <div class="col-sm-12">
         <div class="card adminLog">
             <h5 class="card-header text-center">Logs</h5>
             <div class="card-body">
                         {{!-- <h5 class="card-title">Logs</h5> --}}
                     <table class="table table-striped">
+
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">ID</th>
@@ -32,29 +73,27 @@
                                 <th scope="col">DATE/TIME</th>
                             </tr>
                         </thead>
+
                         <tbody>
-                            {{#each results}}
+                            {{#each results}} 
                             <tr>
-                                <td>{{id}}</td>
+                                <td>{{id}}</td>{{! for each loop --}}
                                 <td>{{username}}</td>
                                 <td>{{logTime}}</td>
                             </tr>
                             {{/each}}
                         </tbody>
+                        
                     </table>
                 </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
 </div>
 
 
 
-<div class="bottom">
-    <form action="/loginUser/" method="post">
-    <input class="btn" type="submit" value="logout"></form>
-</div>
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </body>
 
 

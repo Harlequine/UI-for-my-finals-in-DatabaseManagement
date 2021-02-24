@@ -6,7 +6,7 @@ router.post('/userProfile',userController.login)
 
 
 router.post("/", (req, res) => {
-    res.render('login');
+    res.redirect('/');
 })
 
 module.exports = router;

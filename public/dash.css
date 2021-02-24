@@ -9,9 +9,7 @@ body{
     overflow: hidden;
     
 }
-img{
-    margin-top: 10px;
-}
+
 .container-top a{
     display: inline-flexbox;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -32,21 +30,21 @@ img{
 }
 
 .container-mid{
-    
     width: 500px;
     border: 5px solid black;
     margin: auto;
     margin-top: 10%;
     background-color: beige;
+    text-align: center;
+    float: center;
 }
-.container-mid .header{
+
+.continer-mid .header{
     margin-top: 10px;
     margin:auto;
     font-size: 25px;
     
 }
-
-
 .container-mid button{
     background-color: #ffff;  
     border-color: black; 
