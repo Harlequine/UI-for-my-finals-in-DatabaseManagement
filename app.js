@@ -1,25 +1,24 @@
-//load our app server using express
 const express = require('express');
-const app = express();//main 
-const path = require('path');//directory.
-const bodyParser = require('body-parser');//for pages
-const dotenv = require('dotenv');//hides database info to the public eye
+const app = express();
+const path = require('path');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 
-app.use(bodyParser.urlencoded({extended: false}));//format page names to url
+app.use(bodyParser.urlencoded({extended: false}));
 
-dotenv.config({path: './dbconnect.env'})// hide database credentials
+dotenv.config({path: './dbconnect.env'})
 
-const publicDirectory = path.join(__dirname, './public')// easily access files inside the public folder
-app.use(express.static(publicDirectory));// shortens the directory. dont have to indicate the file path, only the file itself
-app.set('view engine','hbs')// allows us to view hbs files
+const publicDirectory = path.join(__dirname, './public')
+app.use(express.static(publicDirectory));
+app.set('view engine','hbs')
 
 
-app.use('/', require('./routes/pages'));//route 
+app.use('/', require('./routes/pages'));
 app.use('/register', require('./routes/register'));
 app.use('/loginUser',require('./routes/loginUser'));
 app.use('/loginAdmin', require('./routes/loginAdmin'));
 
-//localhost:3000
+
 app.listen(3000,() => {
     console.log("Connected to port 3000!")
 });

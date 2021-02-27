@@ -10,7 +10,6 @@ function getConnection(){
     })
 }
 
-
 exports.admin = (req, res) => {
     const connection = getConnection();
     const username = req.body.username;

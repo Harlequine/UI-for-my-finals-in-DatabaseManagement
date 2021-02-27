@@ -15,7 +15,7 @@ exports.login = (req, res) => {
     const password = req.body.password;
 
     connection.query("SELECT * FROM users WHERE username = ? AND password = ?", [username,password],(err, results,fields) => {
-        if(results.length > 0) {// true
+        if(results.length > 0) {
             connection.query("SELECT `id` FROM `users` WHERE `username` = ?", [username],(err, results,fields) => {
                 const idd = Number(JSON.parse(JSON.stringify(results[0].id)));
                 connection.query("INSERT INTO log (`id`,`username`) VALUES(?,?)",[idd,username], (err, results,fields) => {
@@ -33,7 +33,7 @@ exports.login = (req, res) => {
         })
 
         }
-        else{//false
+        else{
             const msg = "Incorrect Username or Password";
             return res.render('login', {message: msg})
         }

@@ -4,7 +4,6 @@ const userController = require("../controllers/loginUser")
 
 router.post('/userProfile',userController.login)
 
-
 router.post("/", (req, res) => {
     res.redirect('/');
 })

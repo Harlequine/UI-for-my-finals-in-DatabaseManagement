@@ -20,7 +20,7 @@ exports.registerUser = (req, res) => {
 
     if (password === confirmpassword){
         connection.query("SELECT * FROM users WHERE username = ? OR email = ? ",[username,email], (err, results,fields) => {
-            if(results.length > 0) { //check niya kung may kapareho sa table
+            if(results.length > 0) { 
                 const msg = "User Already Exist";
                 return res.render('register', {message: msg})
             }
